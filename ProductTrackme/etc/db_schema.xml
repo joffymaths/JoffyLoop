@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="cart_sku_tracking" resource="default" comment="Table to save Tracking info">
+        <column xsi:type="int" name="id" padding="10" identity="true" unsigned="true" nullable="false" comment="Id"/>
+        <column xsi:type="int" name="quote_id" nullable="false" comment="Quote id"/>
+        <column xsi:type="int" name="quote_item_id" nullable="false" comment="Quote Item id"/>
+        <column xsi:type="varchar" name="sku" nullable="false" length="255" comment="sku"/>
+        <column xsi:type="varchar" name="tracking_code" nullable="false" length="255" comment="Tracking Code"/>
+        <column xsi:type="varchar" name="tracking_message" nullable="false" length="255" comment="Tracking Message"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="true" comment="Created At"/>
+        <column xsi:type="int" name="status" nullable="false" comment="status"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
