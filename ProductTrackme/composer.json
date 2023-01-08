@@ -1,0 +1,27 @@
+{
+    "name": "joffyloop/product_trackme",
+    "description": "This module for product tracking when add to cart and show using rest api",
+		"authors": [
+			{
+					"name": "Joffy Jose",
+					"email": "joffymaths@gmail.com"
+			}
+		],
+    "require": {
+			"magento/framework": "*"
+		},
+    "type": "magento2-module",
+    "version": "2.4.1",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "JoffyLoop\\ProductTrackme\\": ""
+        }
+    }
+}
